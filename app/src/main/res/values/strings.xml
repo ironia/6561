@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyTown</string>
+    <!--핸드폰에서 앱의 이름입니다. 카카오톡 앱의 카카오톡 이라는 글씨 정하는 구간-->
+    <string name="input_phone_label">전화 번호</string>
+    <string name="input_code_label">인증 번호</string>
+    <string name="message_line1">&lt; 제 1회차 6561 구간별 경품내역 &gt;</string>
+    <string name="message_line4_1">8라운드 : 500000pt (2명) \n7라운드 : 100000pt(6장)\n6라운드 : 40000pt(9장)      /     5라운드 : 5000pt(27장)\n4라운드 : 1500pt(81장)       /     3라운드 : 1000pt(243장) \n 2라운드 : 500pt(719장)\n1라운드 : 150pt(2187장)</string>
+    <string name="message_line4_2">8라운드 : 500만원(20명) \n7라운드 : 150만원(6명)\n6라운드 : 10000(9명)      /     5라운드 : 5000(27명)\n4라운드 : 1500(81명)      /     3라운드 : 1000(243명)\n2라운드 : 500 (729명)      /     1라운드 150(2187명)</string>
+    <string name="contentDescription">logo</string>
+    <string name="check_code_input">인증 번호 입력</string>
+    <string name="check_code_output">당첨 확인 검색</string>
+    <string name="default_company">밴드신청</string>
+    <string name="default_second_company">재택부업</string>
+    <string name="phone_number">010–5738–9327</string>
+    <string name="init_title">&lt;경품내역&gt;</string>
+    <string name="default_rp">추첨 준비중</string>
+    <string name="exit">종료</string>
+    <string name="cancel">취소</string>
+    <string name="confirm">확인</string>
+    <string name="defeat_lotto">미당첨</string>
+    <string name="exitMessage">앱을 안전하게 종료하시겠습니까?</string>
+    <string name="city_label">지점코드 :</string>
+    <string name="shop_label">가맹점코드 :</string>
+    <string name="code_label">Code :</string>
+</resources>

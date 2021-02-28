@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>round6561</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>init_message</key>
+        <value>&lt;당첨 가맹점 전용 포인트&gt;
+            &#10;8라운드 (2명) 500,000Point &#10;7라운드 (3명) 30,000Point
+            &#10;6라운드 (9명) 10,000Point&#10;5라운드 (27명) 5,000Point&#10;&#10;
+            &lt;전체 가맹점 가능 포인트&gt;&#10;4라운드 (81명) 1,500Point
+            &#10;3라운드 (243명) 1,000Point&#10;2라운드 (729명) 500Point&#10;1라운드 (2187명) 150Point</value>
+    </entry>
+</defaultsMap>

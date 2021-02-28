@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "647320802792",
+    "firebase_url": "https://mytown-63c96.firebaseio.com",
+    "project_id": "mytown-63c96",
+    "storage_bucket": "mytown-63c96.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647320802792:android:78315ec607c1beee9e805d",
+        "android_client_info": {
+          "package_name": "org.howcompany.mytown"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647320802792-fdfsmsfpvvum2dr9sd04198vcr0f87em.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqTvdMu1RqPxp3fL8TgKTUdNPd2Q2AGAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647320802792-fdfsmsfpvvum2dr9sd04198vcr0f87em.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
