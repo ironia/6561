@@ -17,7 +17,7 @@
     <string name="exit">종료</string>
     <string name="cancel">취소</string>
     <string name="confirm">확인</string>
-    <string name="defeat_lotto">미당첨</string>
+    <string name="defeat_lotto">추첨진행중</string>
     <string name="exitMessage">앱을 안전하게 종료하시겠습니까?</string>
     <string name="city_label">지점코드 :</string>
     <string name="shop_label">가맹점코드 :</string>
