@@ -435,7 +435,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("https://vrtown.modoo.at/"));
+                intent.setData(Uri.parse("https://81816561.com"));
                 startActivity(intent);
 
             }

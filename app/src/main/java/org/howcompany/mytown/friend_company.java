@@ -168,7 +168,7 @@ public class friend_company extends AppCompatActivity {
         button25 =	findViewById(R.id.button1_7	);
         button26 =	findViewById(R.id.button2_7	);
         button27 =	findViewById(R.id.button3_7	);
-        button28 =	findViewById(R.id.button4_7	);
+        button28 =	findViewById(R.id.button4_7	);// 버튼 4 7번째 줄
         button29 =	findViewById(R.id.button1_8	);
         button30 =	findViewById(R.id.button2_8	);
         button31 =	findViewById(R.id.button3_8	);

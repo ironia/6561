@@ -460,7 +460,7 @@
                 android:layout_width="@dimen/main_button_width"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_button_list"
-                android:text="홈피"
+                android:text="시장"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/cafe_button"
                 app:layout_constraintHorizontal_bias="0.5"
