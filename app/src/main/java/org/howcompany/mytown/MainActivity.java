@@ -557,7 +557,6 @@ public class MainActivity extends AppCompatActivity {
                     request_button.setText("검색");
                     recyclerView.setVisibility(View.VISIBLE);
                     phone = input_phone.getText().toString();
-                    Log.d("Main", " : " + phone);
                     /*Retrofit retrofit = new Retrofit.Builder()
                             .baseUrl("http://mytown.cafe24app.com/")
                             .addConverterFactory(GsonConverterFactory.create())
@@ -569,12 +568,13 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(Call<FindUser> call, Response<FindUser> response) {
                             if (response.body() != null) {
+
+
                                 FindUser user = response.body();
                                 List<User> users = user.getUser();
                                 int sum_lp_value = 0;
                                 for (int i = 0; i < users.size(); i++) {
                                     sum_lp_value += users.get(i).getLp();
-                                    Log.d("point",i+"차"+users.get(i).getLp());
                                 }
                                 init_view(round_value, round_text);
                                 String value = "당첨 포인트 합계 : " + sum_lp_value + " point";
@@ -590,7 +590,6 @@ public class MainActivity extends AppCompatActivity {
                                     sum_lp.setText("검색 결과가 없습니다.");
                                 }
 
-                                Log.d("hahaha", user + "");
                             /*
                             String message = "id = "+user.getId()+
                                     "lp = "+user.getLp()+
@@ -760,150 +759,190 @@ public class MainActivity extends AppCompatActivity {
             holder1.code.setText(user.getCode());
             holder1.city_code.setText(user.getCity());
             holder1.shop_code.setText(user.getShop());
+            int present = user.getId();
 
+            //자신의 번호가 3의 배수인지 확인 필요.
+            if(fu >=((user.getId()/3)*3+3)){
 
-            if (fu > 2 && fu < 9) {
                 value = user.getR1() + " point";
                 holder1.r1.setText(value);
-            } else if (fu > 8 && fu < 27) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
+            }
+            if(fu >=((user.getId()/9)*9+9)){
+                Log.d("dd",((user.getId()/9+1)*9)+"");
                 value = user.getR2() + " point";
                 holder1.r2.setText(value);
-            } else if (fu > 26 && fu < 81) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
+            }
+            if(fu >=((user.getId()/27+1)*27)){
+                Log.d("dd",((user.getId()/27+1)*27)+"");
                     value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
                 holder1.r3.setText(value);
-            } else if (fu > 80 && fu < 243) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
-                    value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r3.setText(value);
-                if (user.getR4() != 0) {
+            }
+            if (fu >=((user.getId()/81+1)*81)) {
                     value = user.getR4() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
                 holder1.r4.setText(value);
-            } else if (fu > 242 && fu < 729) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
-                    value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r3.setText(value);
-                if (user.getR4() != 0) {
-                    value = user.getR4() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r4.setText(value);
-                if (user.getR5() != 0) {
+            }
+            if(fu >=((user.getId()/243+1)*243)){
                     value = user.getR5() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
                 holder1.r5.setText(value);
-            } else if (fu > 728 && fu < 2187) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
-                    value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r3.setText(value);
-                if (user.getR4() != 0) {
-                    value = user.getR4() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r4.setText(value);
-                if (user.getR5() != 0) {
-                    value = user.getR5() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r5.setText(value);
+            }
+
+            if(fu >=((user.getId()/720+1)*720)){
                 value = user.getR6() + " point";
                 holder1.r6.setText(value);
-            } else if (fu > 2186 && fu < 6561) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
-                    value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-
-                }
-                holder1.r3.setText(value);
-                if (user.getR4() != 0) {
-                    value = user.getR4() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r4.setText(value);
-                if (user.getR5() != 0) {
-                    value = user.getR5() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r5.setText(value);
-                value = user.getR6() + " point";
-                holder1.r6.setText(value);
+            }
+            if( fu >=((user.getId()/2187+1)*2187)){
                 value = user.getR7() + " point";
                 holder1.r7.setText(value);
-            } else if (fu == 6561) {
-                value = user.getR1() + " point";
-                holder1.r1.setText(value);
-                value = user.getR2() + " point";
-                holder1.r2.setText(value);
-                if (user.getR3() != 0) {
-                    value = user.getR3() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r3.setText(value);
-                if (user.getR4() != 0) {
-                    value = user.getR4() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r4.setText(value);
-                if (user.getR5() != 0) {
-                    value = user.getR5() + " point";
-                } else {
-                    value = getString(R.string.defeat_lotto);
-                }
-                holder1.r5.setText(value);
-                value = user.getR6() + " point";
-                holder1.r6.setText(value);
-                value = user.getR7() + " point";
-                holder1.r7.setText(value);
+            }
+            if(fu >=((user.getId()/6561+1)*6561)){
                 value = user.getR8() + " point";
                 holder1.r8.setText(value);
             }
+
+
+
+
+//            if (fu > 2 && fu < 9) {
+//                holder1.r1.setText(value);
+//            } else if (fu > 8 && fu < 27) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//            } else if (fu > 26 && fu < 81) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r3.setText(value);
+//            } else if (fu > 80 && fu < 243) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r3.setText(value);
+//                if (user.getR4() != 0) {
+//                    value = user.getR4() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r4.setText(value);
+//            } else if (fu > 242 && fu < 729) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r3.setText(value);
+//                if (user.getR4() != 0) {
+//                    value = user.getR4() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r4.setText(value);
+//                if (user.getR5() != 0) {
+//                    value = user.getR5() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r5.setText(value);
+//            } else if (fu > 728 && fu < 2187) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r3.setText(value);
+//                if (user.getR4() != 0) {
+//                    value = user.getR4() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r4.setText(value);
+//                if (user.getR5() != 0) {
+//                    value = user.getR5() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r5.setText(value);
+//                value = user.getR6() + " point";
+//                holder1.r6.setText(value);
+//            } else if (fu > 2186 && fu < 6561) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//
+//                }
+//                holder1.r3.setText(value);
+//                if (user.getR4() != 0) {
+//                    value = user.getR4() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r4.setText(value);
+//                if (user.getR5() != 0) {
+//                    value = user.getR5() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r5.setText(value);
+//                value = user.getR6() + " point";
+//                holder1.r6.setText(value);
+//                value = user.getR7() + " point";
+//                holder1.r7.setText(value);
+//            } else if (fu == 6561) {
+//                value = user.getR1() + " point";
+//                holder1.r1.setText(value);
+//                value = user.getR2() + " point";
+//                holder1.r2.setText(value);
+//                if (user.getR3() != 0) {
+//                    value = user.getR3() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r3.setText(value);
+//                if (user.getR4() != 0) {
+//                    value = user.getR4() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r4.setText(value);
+//                if (user.getR5() != 0) {
+//                    value = user.getR5() + " point";
+//                } else {
+//                    value = getString(R.string.defeat_lotto);
+//                }
+//                holder1.r5.setText(value);
+//                value = user.getR6() + " point";
+//                holder1.r6.setText(value);
+//                value = user.getR7() + " point";
+//                holder1.r7.setText(value);
+//                value = user.getR8() + " point";
+//                holder1.r8.setText(value);
+//            }
             int countOfMore = user.getLp() % 10;
             int pointOfSet = user.getLp() - countOfMore;
             value = pointOfSet + " point";
